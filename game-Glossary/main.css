@@ -1,0 +1,56 @@
+/*基本デザイン*/
+body{
+    background-color: rgb(197, 233, 221);
+    background-image: url(images/backgroud-img.png);
+    padding: 2% 0;
+}
+.main{
+    font-size: 125%;
+    line-height: 175%;
+    border-radius: 50px;
+    background-color: #fff;
+    margin: auto;
+    padding: 1% 3%;
+    width: 80%;
+}
+body h1{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-color: rgb(122, 166, 187);
+    width: fit-content;
+}
+body h2{
+    border-bottom: solid 3px black;
+}
+
+/*説明ボックス*/
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+.box_img{
+    flex: 30%;
+    padding: 3%;
+}
+.box_img img{
+    width: 100%;
+    min-width: 225px;
+}
+.box_article{
+    flex: 60%;
+    padding:3% 0;
+}
+
+
+/*タブレットサイズ以下*/
+@media screen and (max-width: 850px){
+    section.main{
+        width: 90%;
+        font-size: 100%;
+    }
+}
