@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>偽サイトへと誘導</title>
+    <link rel="stylesheet" href="phishing_style.css" type="text/css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="head-inner">
+                <h1>偽サイトへと誘導</h1>
+                <p class="description">ユーザ情報を入力してしまうと・・・</p>
+            </div>
+        </div>
+        <div id="contents">
+            <h2>ユーザ情報を入力してください</h2>
+            <script type="text/javascript">
+                function DataSend(){
+                    id = document.form.text1.value;
+                    password = document.form.text2.value;
+                    if (id == "" || password == "") {
+                        alert("IDとパスワードを入力してください");
+                    }else {
+                        alert("IDは" + id + "\n" + "パスワードは" + password);
+                    }
+                }
+            </script>
+            <br><br>
+            <div>
+                <form name="form">
+                    <p align="center">ID　　　　　<input type="text" name="text1" width="100%"><br></p>
+                    <p align="center">パスワード　<input type="password" name="text2" width="100%"><br></p>
+                    <br>
+                    <center>
+                        <a onclick="DataSend();">
+                            <button type="button">送信する</button>
+                        </a>
+                    </center>
+                </form>
+            </div>
+            <h2><br>解説</h2>
+            <div>
+                <br>
+                <p>攻撃者は本物のサイトにそっくりな偽サイトに誘導し、ユーザ情報の入力を促してきます。</p>
+                <p>ユーザ情報を入力して送信してしまうと、攻撃者はあなたのユーザ情報を盗んでしまいます。</p>
+                <p>偽サイトでユーザ情報を入力しない様にしましょう。</p>
+            </div>
+            <div align="right">
+                <a href="phishing_index.html">
+                    <button type="button">ホームへ</button>
+                </a>
+            </div>
+        </div>
+        <br><br>
+        <div id="footer">© KIT sec-prj</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>Eメールからフィッシングサイトへ誘導</title>
+    <link rel="stylesheet" href="phishing_style.css" type="text/css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="head-inner">
+                <h1>Eメールからフィッシングサイトへ誘導</h1>
+                <p class="description">どうやら怪しいメールが届いた様です</p>
+            </div>
+        </div>
+        <div id="contents">
+            <div>
+                <h2>【緊急】○○郵便から重要なお知らせ</h2>
+                <h2>○○郵便 担当者 &lt;hogehoge.mail&gt;</h2>
+                <p>
+                    ※お客様宛のお荷物が通常配送より3日遅れています※
+                </p>
+                <p>
+                    平素より○○郵便をご利用いただき、誠にありがとうございます。<br>
+                    この度、お荷物の配送についてお客様へと重要なお知らせがございます。
+                </p>
+                <p>
+                    今現在、通常配送より3日ほどの遅れが生じております。<br>
+                    お客様には大変ご迷惑をお掛けしております。
+                </p>
+                <p>
+                    お客様宛のお荷物の配送状況は下記のURLからご確認いただけます。<br>
+                    何卒よろしくお願いいたします。
+                </p>
+                <p>
+                    <a href="phishing_form.html">https://www.marumaruyubin.co.jp/qawsedrftgyhujikolp</a>
+                </p>
+                <p>
+                    何かご不明な点がございましたら、配送コールセンターまでご連絡ください。<br>
+                    引き続きお客様のご期待に沿える様に一同努めてまいります。
+                </p>
+            </div>
+            <div>
+                <h2><br>解説</h2>
+                <p>メールの本文にフィッシングサイトのURLを記載し、クリックを促します。</p>
+                <p>送信元を偽造したり、もっともらしい文章を使用したりして偽サイトへ誘導します。</p>
+                <p>送信元のメールアドレスをチェックしたり、記載されているURLが正しいものか確認しましょう。</p>
+                <div align="right">
+                    <a href="phishing_index.html">
+                        <button type="button">ホームへ</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">© KIT sec-prj</div>
+    </div>
+</body>
+</html>
