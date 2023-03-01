@@ -48,7 +48,7 @@ a:hover{
     }
 }
 
-/*PCサイズ*/
+/*PCサイズ(小)*/
 @media (min-width: 1250px){
     body{
         font-size: 150%;
@@ -57,7 +57,20 @@ a:hover{
         font-size: 200%;
     }
     .boxes_container{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*PCサイズ（大）*/
+@media (min-width: 1700px){
+    body{
+        font-size: 150%;
+    }
+    h1{
+        font-size: 200%;
+    }
+    .boxes_container{
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
@@ -74,7 +87,7 @@ a:hover{
 }
 .box img{
     margin: auto;
-    max-height: 200px;
+    max-height: 160px;
     max-width: 200px;
 }
 .box .btn{
