@@ -65,7 +65,8 @@
                     タイピングは得意かな？<br>
                     より高得点を目指して何度も挑戦だ！
                 </p>
-                <a href="https://kenta1023.github.io/CyberSecurityTyping/" class="btn">挑戦！</a>
+                <a href="https://kenta1023.github.io/CyberSecurityTyping/" class="btn" id="typing-from-PC">挑戦！</a>
+                <a style="background-color: darkgray ;"class="btn" id="typing-from-mobile">パソコンからのみアクセス可能</a>
             </div>
 
             <div class="box">
@@ -79,6 +80,13 @@
             </div>
         </div>
     </section>
+    <script>//モバイル端末はタイピングゲーム非対応
+    document.getElementById("typing-from-mobile").style.display="none";
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+            document.getElementById("typing-from-PC").style.display="none";
+            document.getElementById("typing-from-mobile").style.display="block";
+        }
+    </script>
 </body>
 
 </html>
